@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\Theme1\StyleSheet1.css" />
+    <Content Include="App_Themes\bootstrap\bootstrap.css" />
+    <Content Include="assets\grid.css" />
+    <Content Include="assets\normalize.css" />
+    <Content Include="assets\utilities.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -82,7 +85,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\Theme1\Skin1.skin" />
+    <Content Include="App_Themes\bootstrap\bootstrap.skin" />
+    <Content Include="App_Themes\bootstrap\bootstrap.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
