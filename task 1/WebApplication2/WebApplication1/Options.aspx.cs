@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Options : System.Web.UI.Page
     {
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            Page.Theme = "bootstrap";
+            Page.Theme = "uikit";
         }
     }
 }
