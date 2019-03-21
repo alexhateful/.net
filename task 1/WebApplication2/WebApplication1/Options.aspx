@@ -23,24 +23,34 @@
                 <div class="col-4">
                     <h1 class="text-center mt-5 uk-margin-large-top">Choose theme</h1>
                     <div class="form-group uk-margin">
-                        <asp:RadioButton Value="bootstrap" runat="server" Text="123" GroupName="theme" CssClass="custom-control custom-radio uk-radio" />
+                        <asp:RadioButton ID="bootstrap" Value="bootstrap" runat="server" Text="bootstrap" GroupName="theme" CssClass="custom-control custom-radio uk-radio" />
                     </div>
                     <div class="form-group uk-margin">
-                        <asp:RadioButton Value="uikit" runat="server" Text="21" GroupName="theme" CssClass="custom-control custom-radio uk-radio" />
+                        <asp:RadioButton ID="uikit" Value="uikit" runat="server" Text="uikit" GroupName="theme" CssClass="custom-control custom-radio uk-radio" />
                     </div>
-                    <asp:Button Text="Submit" runat="server" SkinID="primary" />
+                    <asp:Button ID="Theme_Submit" Text="Submit" runat="server" SkinID="primary" OnClick="Theme_Submit_Click" />
                 </div>
             </div>
         </div>
+        <%--bootstrap--%>
         <div>
             <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
                 <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
             </div>
             <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
                 <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
             </div>
+        </div>
+        <%--uikit--%>
+        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+            <label>
+                <input class="uk-radio" type="radio" name="radio2" checked>
+                A</label>
+            <label>
+                <input class="uk-radio" type="radio" name="radio2">
+                B</label>
         </div>
     </form>
 </body>
