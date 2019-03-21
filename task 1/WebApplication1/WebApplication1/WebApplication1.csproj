@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\bootstrap\bootstrap.css" />
+    <Content Include="App_Themes\uikit\uikit.css" />
     <Content Include="assets\grid.css" />
     <Content Include="assets\normalize.css" />
     <Content Include="assets\utilities.css" />
@@ -86,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\bootstrap\bootstrap.skin" />
-    <Content Include="App_Themes\bootstrap\bootstrap.css.map" />
+    <Content Include="App_Themes\uikit\uikit.skin" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

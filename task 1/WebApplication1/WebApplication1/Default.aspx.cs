@@ -11,7 +11,7 @@ namespace WebApplication1
     {
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            Page.Theme = "bootstrap";
+            Page.Theme = "uikit";
         }
     }
 }

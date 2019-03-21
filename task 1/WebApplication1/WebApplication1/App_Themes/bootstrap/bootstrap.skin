@@ -16,3 +16,11 @@ Default skin template. The following skins are provided as examples only.
 
 <%-- input --%>
 <asp:TextBox runat="server" CssClass="form-control" />
+<asp:Button runat="server" CssClass="btn btn-primary" SkinID="primary" />
+<asp:Button runat="server" CssClass="btn btn-secondary" SkinID="secondary" />
+<asp:Button runat="server" CssClass="btn btn-success" SkinID="success" />
+<asp:Button runat="server" CssClass="btn btn-danger" SkinID="danger" />
+<asp:Button runat="server" CssClass="btn btn-warning" SkinID="warning" />
+<asp:Button runat="server" CssClass="btn btn-info" SkinID="info" />
+<asp:Button runat="server" CssClass="btn btn-light" SkinID="light" />
+<asp:Button runat="server" CssClass="btn btn-dark" SkinID="dark" />

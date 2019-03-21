@@ -14,22 +14,19 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <br />
-            <br />
-            <br />
             <div class="row">
                 <div class="col-4">&nbsp;</div>
                 <div class="col-4">
-                    <h1 class="text-center">Login form</h1>
-                    <div class="form-group">
+                    <h1 class="text-center mt-5 uk-margin-large-top">Login form</h1>
+                    <div class="form-group uk-margin">
                         <asp:Label ID="UsernameLabel"
                             Text="Username:"
                             AssociatedControlID="UsernameTextBox"
                             runat="server">
                         </asp:Label>
-                        <asp:TextBox ID="UsernameTextBox" runat="server" CssClass="form-control" />
+                        <asp:TextBox ID="UsernameTextBox" runat="server" />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group uk-margin">
                         <asp:Label ID="Label2"
                             Text="Password:"
                             AssociatedControlID="UsernamePassword"
@@ -37,7 +34,7 @@
                         </asp:Label>
                         <asp:TextBox ID="UsernamePassword" runat="server" />
                     </div>
-                    <asp:Button Text="Submit" runat="server" CssClass="btn btn-primary" />
+                    <asp:Button Text="Submit" runat="server" SkinID="primary" />
                 </div>
             </div>
         </div>
