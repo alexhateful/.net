@@ -9,22 +9,19 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        string theme = "uikit";
-
-        protected void Get_Theme()
-        {
-            object obj = ViewState["theme"];
-
-            if (obj != null)
-            {
-                theme = (string)obj;
-            }
-        }
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            Get_Theme();
-            Page.Theme = theme;
+            HttpCookie cookie = Request.Cookies["Theme"];
+
+            if (cookie != null)
+            {
+                Page.Theme = cookie.Value;
+            }
+            else
+            {
+                Page.Theme = "Bootstrap";
+            }
         }
     }
 }

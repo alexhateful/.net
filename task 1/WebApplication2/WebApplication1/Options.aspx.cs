@@ -9,34 +9,34 @@ namespace WebApplication1
 {
     public partial class Options : System.Web.UI.Page
     {
-        string theme = "uikit";
-
-        protected void Get_Theme()
-        {
-            object obj = ViewState["theme"];
-
-            if (obj != null)
-            {
-                theme = (string)obj;
-            }
-        }
-
-        protected void Set_Theme()
-        {
-            Theme_Submit.Text = theme;
-            ViewState["theme"] = theme;
-        }
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            Get_Theme();
-            Page.Theme = theme;
+            HttpCookie cookie = Request.Cookies["Theme"];
+
+            if (cookie != null)
+            {
+                Page.Theme = cookie.Value;
+            }
+            else
+            {
+                Page.Theme = "bootstrap";
+            }
         }
 
         protected void Theme_Submit_Click(object sender, EventArgs e)
         {
-            theme = bootstrap.Checked ? bootstrap.ID : uikit.ID;
-            Set_Theme();
+            string themeName;
+
+            themeName = bootstrap.Checked ? "bootstrap" : "uikit";
+
+            HttpCookie cookie = new HttpCookie("Theme", themeName);
+
+            cookie.Expires = DateTime.Now.AddHours(1);
+
+            Response.Cookies.Add(cookie);
+
+            Response.Redirect(Request.Url.PathAndQuery);
         }
     }
 }
